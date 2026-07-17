@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Private Dining | LUMIÈRE Gastronomy</title>
+<!-- Google Fonts: Poppins for all weights -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .gold-border-focus:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 0 1px #d4af37;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0c0f0f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333535;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#2f3131",
+                        "on-primary-container": "#554300",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "on-secondary-container": "#c5b5aa",
+                        "tertiary-fixed-dim": "#c9c6c5",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-tertiary-container": "#464545",
+                        "primary-fixed": "#ffe088",
+                        "on-primary-fixed-variant": "#574500",
+                        "primary": "#f2ca50",
+                        "on-secondary-fixed": "#221a13",
+                        "on-primary-fixed": "#241a00",
+                        "surface-tint": "#e9c349",
+                        "surface-dim": "#121414",
+                        "secondary": "#d4c3b8",
+                        "on-tertiary": "#313030",
+                        "on-secondary-fixed-variant": "#50453c",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#e2e2e2",
+                        "surface-variant": "#333535",
+                        "tertiary": "#d0cecd",
+                        "surface-container-low": "#1a1c1c",
+                        "outline": "#99907c",
+                        "tertiary-container": "#b5b2b2",
+                        "inverse-primary": "#735c00",
+                        "surface-container-high": "#282a2b",
+                        "surface-bright": "#37393a",
+                        "on-error": "#690005",
+                        "outline-variant": "#4d4635",
+                        "inverse-surface": "#e2e2e2",
+                        "secondary-fixed-dim": "#d4c3b8",
+                        "on-surface": "#e2e2e2",
+                        "surface-container-highest": "#333535",
+                        "secondary-fixed": "#f1dfd3",
+                        "secondary-container": "#52473e",
+                        "on-surface-variant": "#d0c5af",
+                        "on-secondary": "#382f26",
+                        "surface-container": "#1e2020",
+                        "surface-container-lowest": "#0c0f0f",
+                        "error": "#ffb4ab",
+                        "surface": "#121414",
+                        "on-primary": "#3c2f00",
+                        "tertiary-fixed": "#e5e2e1",
+                        "primary-container": "#d4af37",
+                        "background": "#121414"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-desktop": "128px",
+                        "margin-edge": "32px",
+                        "base": "8px",
+                        "section-gap-mobile": "64px",
+                        "gutter": "24px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Poppins"],
+                        "display-lg": ["Poppins"],
+                        "body-md": ["Poppins"],
+                        "label-caps": ["Poppins"],
+                        "display-lg-mobile": ["Poppins"],
+                        "body-lg": ["Poppins"],
+                        "headline-sm": ["Poppins"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-md border-b border-white/15 shadow-[0_40px_40px_rgba(26,18,11,0.3)]">
+<div class="flex justify-between items-center px-margin-edge py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">restaurant</span>
+<span class="font-display-lg text-display-lg-mobile md:text-headline-md text-primary tracking-tighter uppercase">LUMIÈRE</span>
+</div>
+<nav class="hidden md:flex gap-8">
+        <a class="text-on-surface hover:text-primary transition-colors font-medium" href="Index.html">Home</a>
+<a class="font-body-md text-on-surface hover:text-primary transition-colors duration-300" href="menu.html">Menu</a>
+<a class="font-body-md text-primary border-b-2 border-primary pb-1" href="private.html">Private Table</a>
+<a class="text-on-surface hover:text-primary transition-colors font-label-caps text-label-caps" href="Package.html">Package</a>
+<a class="font-body-md text-on-surface hover:text-primary transition-colors duration-300" href="About.html">Story</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-label-caps uppercase tracking-widest active:scale-95 transition-all duration-300 hover:opacity-80"><a href="Booking.html">  Book a Table</a>
+              
+            </button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105 transform transition-transform duration-[10000ms] hover:scale-100" data-alt="A luxurious dark mahogany private dining room with a long polished walnut table set with fine crystal glassware and gold-rimmed porcelain. Soft, warm ambient light spills from crystal chandeliers above, highlighting the rich wood textures and velvet-upholstered chairs. The atmosphere is one of exclusive, quiet luxury and intimate sophistication." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDnurLip99HFqkquISXHvHi6c3EjjookvPM8N71oRtWrgi1hqxg8hPrt6B00EzzzDJppROq5W79pjFnhfGwwBVR5z6BfJuB9ACpQNwDbyvnmEnuuPCtZZ9zVMIrkmTFxEuayeoYhVJikmsmb2MW2ZlL5z628BH_8WrejH0z0p4wmEWbQoAjLT2UO6NgmZRxDDajif8r6JBCoLmQO_WzqmfWhQ1QY8BK32s4oIXxsNW143w1sAxKdmkgBj-bwl0xkXF-jnK1Geqg4HmX')"></div>
+<div class="absolute inset-0 bg-black/60"></div>
+</div>
+<div class="relative z-10 text-center px-margin-edge max-w-4xl">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6 uppercase tracking-tight">Private Dining</h1>
+<p class="font-headline-sm text-headline-sm text-primary mb-10 tracking-widest uppercase">Exquisite Spaces for Unforgettable Moments</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<a class="bg-primary-container text-on-primary-container px-8 py-4 font-label-caps tracking-widest uppercase hover:opacity-90 transition-all" href="Booking.html">Enquire Now</a>
+<a class="border border-primary text-primary px-8 py-4 font-label-caps tracking-widest uppercase hover:bg-primary/10 transition-all" href="Package.html">View Packages</a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-primary text-4xl">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Introduction -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop px-margin-edge">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<h2 class="font-headline-md text-headline-md text-white border-l-4 border-primary pl-6">The Art of Bespoke Hospitality</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    At LUMIÈRE, we transform your special occasions into legendary narratives. Whether it's an intimate family milestone, a high-stakes executive boardroom meeting, or a grand gala celebration, our private dining experience is curated with surgical precision and artistic flair.
+                </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Every detail—from the bespoke menu creation by our Michelin-starred chefs to the choreographed service of our sommelier team—is designed to reflect your personal vision.
+                </p>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 border border-primary/20 translate-x-4 translate-y-4 -z-10 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
+<img class="w-full aspect-[4/5] object-cover shadow-2xl" data-alt="A close-up shot of a meticulously plated wagyu beef steak with truffle reductions and edible gold leaf, served on a textured ceramic plate. In the background, out-of-focus candlelight and crystal wine glasses create a warm, high-end bokeh effect. The lighting is dramatic and moody, emphasizing the culinary artistry and fine dining atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKPEZl9_Sa4De99-Wm7hEcgbuCZnbSu_SicErLIBF-yrg2WPx3ohgTg885AULRRUwW4nETp6m-3DnpvnqE8ZKh7ugA80aeBxTPgjZdCw8ovTskJFKNlSET1PU5jPb7cxc1XzejhjcRRJy3JalMACA9g5klUc6K3ehy66Pxh6SKOR6IhuXrs7Sk45eiW4PBROOSuBaT5sXsI0d1P3G7HAty4lvS44ho4cwTQ7blholZhQQKTfoi45jo4Hjljaz-RFjEOVkL-rwzD6uN"/>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="bg-surface-container-lowest py-section-gap-mobile md:py-section-gap-desktop px-margin-edge">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<span class="font-label-caps text-primary tracking-widest uppercase mb-4 block">Unrivaled Excellence</span>
+<h2 class="font-headline-md text-headline-md text-white">Curated Amenities</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Feature Cards -->
+<div class="glass-card p-10 flex flex-col items-center text-center group hover:border-primary/50 transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">meeting_room</span>
+<h3 class="font-headline-sm text-headline-sm text-white mb-4">Elegant Private Rooms</h3>
+<p class="text-on-surface-variant">Soundproofed sanctuaries designed for total privacy and acoustic perfection.</p>
+</div>
+<div class="glass-card p-10 flex flex-col items-center text-center group hover:border-primary/50 transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">restaurant_menu</span>
+<h3 class="font-headline-sm text-headline-sm text-white mb-4">Customized Menu</h3>
+<p class="text-on-surface-variant">Collaborate directly with our chefs to craft a gastronomic journey unique to your event.</p>
+</div>
+<div class="glass-card p-10 flex flex-col items-center text-center group hover:border-primary/50 transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">skillet</span>
+<h3 class="font-headline-sm text-headline-sm text-white mb-4">Professional Service</h3>
+<p class="text-on-surface-variant">Dedicated butler service ensuring every guest receives attentive, discreet hospitality.</p>
+</div>
+<div class="glass-card p-10 flex flex-col items-center text-center group hover:border-primary/50 transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">auto_awesome</span>
+<h3 class="font-headline-sm text-headline-sm text-white mb-4">Luxury Ambience</h3>
+<p class="text-on-surface-variant">High-fidelity sound systems and adjustable mood lighting for the perfect atmosphere.</p>
+</div>
+<div class="glass-card p-10 flex flex-col items-center text-center group hover:border-primary/50 transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">celebration</span>
+<h3 class="font-headline-sm text-headline-sm text-white mb-4">Event Decoration</h3>
+<p class="text-on-surface-variant">Floral arrangements and themed decor tailored to the essence of your celebration.</p>
+</div>
+<div class="glass-card p-10 flex flex-col items-center text-center group hover:border-primary/50 transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">cast_for_education</span>
+<h3 class="font-headline-sm text-headline-sm text-white mb-4">Audio &amp; Visual</h3>
+<p class="text-on-surface-variant">Discrete high-definition displays and conferencing tools for corporate excellence.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Showcase -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop">
+<div class="px-margin-edge max-w-container-max mx-auto mb-12 flex justify-between items-end">
+<div>
+<h2 class="font-headline-md text-headline-md text-white">Our Signature Spaces</h2>
+<p class="text-on-surface-variant mt-2">A glimpse into the sanctuary of LUMIÈRE.</p>
+</div>
+<div class="flex gap-4">
+<button class="p-2 border border-white/20 hover:border-primary text-white transition-colors"><span class="material-symbols-outlined">arrow_back</span></button>
+<button class="p-2 border border-white/20 hover:border-primary text-white transition-colors"><span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+<div class="flex gap-6 overflow-x-auto px-margin-edge no-scrollbar pb-12">
+<div class="min-w-[80%] md:min-w-[45%] h-[500px] flex-shrink-0 relative group overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A wide angle shot of the main private dining hall, 'The Grand Salon', featuring a majestic crystal chandelier that reflects in the dark marble floors. A long dining table is decorated with white roses and gold candles, ready for a formal banquet. The walls are adorned with gold leaf wainscoting and velvet drapery. LUXURY aesthetics, dark brown and gold theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApgjTYwPBKDZmO27gfS8WrKqrfdRONyIHUCp5i-ZbLo4YqxfweUv1aJwjW4gho8ifrszUDyJ9GAAcmi1EN4U3fq6j9wMJw_DhwgMRP9r87XCuAJwQoTJl6tzoIdaJlXYRaQ9VmH4cx3rGEzmFl5jD8z65xjbeh7ODuRsavWrpRcL3fQxJe2JDEGhTpc0gRmIeD4nSRNYrhRZetOtJqhY74F_HoPWYnxNn9oUOrK-0hRA2dqAWBUJOhn6QdwV3LgaC_5qdggCwWE1al"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
+<h4 class="font-headline-sm text-white uppercase tracking-widest">The Grand Salon</h4>
+</div>
+</div>
+<div class="min-w-[80%] md:min-w-[45%] h-[500px] flex-shrink-0 relative group overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A detailed view of a luxury cocktail lounge within a private suite. The bar is stocked with high-end spirits, and a gold-rimmed old fashioned glass sits on a dark marble counter with a single ice sphere. Warm amber lighting creates a moody, sophisticated vibe perfect for corporate networking or after-dinner drinks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoMP4_Qz2KY_8U-j9faFlW7ctzgzsT29T6lHCUyQekD_x4c-WoQt9X_yM41W8xljr9hxKZPXqmgq7-ZPx1m9o5lshLi8v2kjar1sE6M36VAfFbIDU-86yvFezkVuT21hJ28G-Z0AXbN76CdMeP6OF4Q3T8cF0Ipg4li5xYHRe8QG3o2WI2ipj6SwAvLbuQH9ptQ6JqO6hqAAmL_hIZYeGbxtcZlVXFU9V1Q8e6-yrtmuauBqMMHfZ74D4FPIX9TSoDVX7CHAcLJRb-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
+<h4 class="font-headline-sm text-white uppercase tracking-widest">The Library Lounge</h4>
+</div>
+</div>
+<div class="min-w-[80%] md:min-w-[45%] h-[500px] flex-shrink-0 relative group overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An intimate corner of a private dining room, featuring a round marble table for four guests. High-back leather chairs offer comfort, while a small spotlight highlights the center of the table. A view through an arched window shows the twinkling city lights in the distance, emphasizing exclusivity and a high-end urban setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCHap2owxGFl-NF6CZp4hwl6Mob8v6_rqByQf0MqdcA1d1I9t-f-8ltYewEaAGik7vUH4MR_RPu0iYKGjOQ8Kq871B8YPksTRAPHqQPT3gq4A61evvE3HfJJqmPl6LyzlXgcK1uWRJUGtbkiH9vApBSxmhSwR18Ar0EtfV1yWlEs-5AhhbcNcr02K2Z-Bli5-Q45kb_vulL4_xrr3huGSdLnOCbT1ejykP05eanD102hDLR_wbbrL5UPs6DuUwiVDccx68g846mWty"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
+<h4 class="font-headline-sm text-white uppercase tracking-widest">The Celestial Alcove</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Dining Packages -->
+<section class="bg-surface-dim py-section-gap-mobile md:py-section-gap-desktop px-margin-edge" id="packages">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-white mb-4">Dining Packages</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Select a foundation for your event, which we will then customize to your precise requirements.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Package 1 -->
+<div class="glass-card flex flex-col h-full hover:-translate-y-2 transition-transform duration-500 overflow-hidden">
+<div class="p-8 border-b border-white/10 text-center">
+<h3 class="font-headline-sm text-white mb-2">The Intimate Soirée</h3>
+<p class="text-primary font-label-caps tracking-widest uppercase">Up to 12 Guests</p>
+</div>
+<div class="p-8 flex-grow">
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                5-Course Signature Tasting Menu
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                Sommelier-led Wine Pairing
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                Personalized Place Cards
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                Private Lounge Access
+                            </li>
+</ul>
+</div>
+<div class="p-8 bg-white/5 text-center mt-auto">
+<p class="text-on-surface-variant text-sm mb-2">Starting from</p>
+<p class="font-headline-sm text-primary">$2,400</p>
+</div>
+</div>
+<!-- Package 2 -->
+<div class="glass-card flex flex-col h-full border-primary/40 shadow-[0_0_30px_rgba(242,202,80,0.1)] hover:-translate-y-2 transition-transform duration-500 overflow-hidden relative">
+<div class="absolute top-0 right-0 bg-primary text-on-primary text-[10px] font-bold px-4 py-1 uppercase tracking-tighter">Recommended</div>
+<div class="p-8 border-b border-white/10 text-center">
+<h3 class="font-headline-sm text-white mb-2">The Executive Suite</h3>
+<p class="text-primary font-label-caps tracking-widest uppercase">Business Excellence</p>
+</div>
+<div class="p-8 flex-grow">
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                Full AV &amp; Video Suite
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                Working Lunch or Formal Dinner
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                Dedicated Event Liaison
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                Secure Fiber Optic Internet
+                            </li>
+</ul>
+</div>
+<div class="p-8 bg-white/5 text-center mt-auto">
+<p class="text-on-surface-variant text-sm mb-2">Starting from</p>
+<p class="font-headline-sm text-primary">$3,800</p>
+</div>
+</div>
+<!-- Package 3 -->
+<div class="glass-card flex flex-col h-full hover:-translate-y-2 transition-transform duration-500 overflow-hidden">
+<div class="p-8 border-b border-white/10 text-center">
+<h3 class="font-headline-sm text-white mb-2">The Grand Celebration</h3>
+<p class="text-primary font-label-caps tracking-widest uppercase">Up to 40 Guests</p>
+</div>
+<div class="p-8 flex-grow">
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                Full Hall Buyout
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                Bespoke 7-Course Menu
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                Live Entertainment Options
+                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                Custom Flora &amp; Light Design
+                            </li>
+</ul>
+</div>
+<div class="p-8 bg-white/5 text-center mt-auto">
+<p class="text-on-surface-variant text-sm mb-2">Starting from</p>
+<p class="font-headline-sm text-primary">$8,500</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reservation Form -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop px-margin-edge bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]" id="reservation">
+<div class="max-w-4xl mx-auto glass-card p-8 md:p-16 rounded-lg relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<div class="text-center mb-12">
+<h2 class="font-headline-md text-headline-md text-white mb-2">Event Inquiry</h2>
+<p class="text-on-surface-variant">Tell us about your upcoming occasion.</p>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase tracking-widest text-[10px]">Full Name</label>
+<input class="w-full bg-surface-container-lowest border-white/10 text-white p-4 focus:ring-0 gold-border-focus transition-all" placeholder="Johnathan Sterling" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase tracking-widest text-[10px]">Email Address</label>
+<input class="w-full bg-surface-container-lowest border-white/10 text-white p-4 focus:ring-0 gold-border-focus transition-all" placeholder="sterling@private.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase tracking-widest text-[10px]">Phone Number</label>
+<input class="w-full bg-surface-container-lowest border-white/10 text-white p-4 focus:ring-0 gold-border-focus transition-all" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase tracking-widest text-[10px]">Occasion Type</label>
+<select class="w-full bg-surface-container-lowest border-white/10 text-white p-4 focus:ring-0 gold-border-focus transition-all appearance-none">
+<option>Birthday</option>
+<option>Anniversary</option>
+<option>Business Meeting</option>
+<option>Other</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase tracking-widest text-[10px]">Event Date</label>
+<input class="w-full bg-surface-container-lowest border-white/10 text-white p-4 focus:ring-0 gold-border-focus transition-all" type="date"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase tracking-widest text-[10px]">Number of Guests</label>
+<input class="w-full bg-surface-container-lowest border-white/10 text-white p-4 focus:ring-0 gold-border-focus transition-all" placeholder="Min 4 - Max 40" type="number"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase tracking-widest text-[10px]">Special Requests</label>
+<textarea class="w-full bg-surface-container-lowest border-white/10 text-white p-4 focus:ring-0 gold-border-focus transition-all" placeholder="Dietary requirements, floral preferences, or audiovisual needs..." rows="4"></textarea>
+</div>
+<div class="md:col-span-2 mt-4">
+<button class="w-full bg-primary text-on-primary-fixed font-label-caps tracking-[0.2em] uppercase py-5 hover:bg-primary/90 transition-all active:scale-95" type="submit">Submit Inquiry</button>
+</div>
+</form>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop px-margin-edge">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-white text-center mb-12">Frequent Questions</h2>
+<div class="space-y-4">
+<!-- FAQ Item -->
+<details class="group glass-card">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-body-lg text-white">How far in advance should I book?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+                        We recommend booking at least 4-6 weeks in advance for weekend events and 2 weeks for weekday corporate luncheons. However, do contact us for last-minute availability.
+                    </div>
+</details>
+<details class="group glass-card">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-body-lg text-white">Can you accommodate severe allergies?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+                        Absolutely. Our culinary team is highly experienced in preparing bespoke menus for all dietary requirements, including vegan, gluten-free, and severe nut allergies.
+                    </div>
+</details>
+<details class="group glass-card">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-body-lg text-white">Is there a minimum spend?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+                        Minimum spend varies by room selection and date. Our event liaisons will provide a detailed quote once we understand your guest count and requirements.
+                    </div>
+</details>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="relative py-section-gap-mobile md:py-section-gap-desktop px-margin-edge overflow-hidden text-center">
+<div class="max-w-container-max mx-auto relative z-10">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-8 tracking-tighter uppercase">Create Your Legacy</h2>
+<p class="text-headline-sm text-on-surface-variant mb-12 font-light">Join the ranks of those who settle for nothing less than extraordinary.</p>
+<a class="inline-block bg-primary text-on-primary-fixed px-12 py-5 font-label-caps tracking-[0.2em] uppercase hover:scale-105 transition-transform duration-300 shadow-[0_10px_30px_rgba(212,175,55,0.3)]" href="#reservation">Begin the Journey</a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-section-gap-mobile">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-edge max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="font-display-lg text-display-lg-mobile text-primary uppercase block mb-6">LUMIÈRE</span>
+<p class="text-on-surface-variant font-body-md">Where culinary art meets the soul of quiet luxury.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-white uppercase tracking-widest mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Menu</a></li>
+<li><a class="text-primary" href="#">Private Dining</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Reservations</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-white uppercase tracking-widest mb-6">Connect</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Press Inquiries</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-white uppercase tracking-widest mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-edge mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-on-surface-variant font-body-md text-sm">© 2024 Lumière Gastronomy. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all cursor-pointer">wine_bar</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all cursor-pointer">local_bar</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all cursor-pointer">restaurant</span>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple form validation micro-interaction
+        const form = document.querySelector('form');
+        if(form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const btn = form.querySelector('button');
+                const originalText = btn.innerText;
+                btn.innerText = "MESSAGE SENT";
+                btn.classList.replace('bg-primary', 'bg-green-600');
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.replace('bg-green-600', 'bg-primary');
+                    form.reset();
+                }, 3000);
+            });
+        }
+    </script>
+</body></html>

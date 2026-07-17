@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lumière Gastronomy | The Art of Taste</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-secondary-container": "#c5b5aa",
+                        "surface": "#121414",
+                        "surface-variant": "#333535",
+                        "secondary-fixed": "#f1dfd3",
+                        "on-tertiary-container": "#464545",
+                        "surface-container-highest": "#333535",
+                        "on-background": "#e2e2e2",
+                        "inverse-primary": "#735c00",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "primary": "#f2ca50",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#221a13",
+                        "primary-fixed": "#ffe088",
+                        "surface-bright": "#37393a",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#e9c349",
+                        "surface-container-low": "#1a1c1c",
+                        "outline": "#99907c",
+                        "on-primary-container": "#554300",
+                        "on-tertiary": "#313030",
+                        "surface-container-lowest": "#0c0f0f",
+                        "secondary-container": "#52473e",
+                        "on-secondary": "#382f26",
+                        "outline-variant": "#4d4635",
+                        "on-surface": "#e2e2e2",
+                        "inverse-on-surface": "#2f3131",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#d4c3b8",
+                        "on-secondary-fixed-variant": "#50453c",
+                        "surface-container-high": "#282a2b",
+                        "tertiary": "#d0cecd",
+                        "surface-tint": "#e9c349",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-primary-fixed-variant": "#574500",
+                        "secondary": "#d4c3b8",
+                        "tertiary-fixed-dim": "#c9c6c5",
+                        "surface-dim": "#121414",
+                        "inverse-surface": "#e2e2e2",
+                        "on-surface-variant": "#d0c5af",
+                        "error": "#ffb4ab",
+                        "surface-container": "#1e2020",
+                        "tertiary-container": "#b5b2b2",
+                        "primary-container": "#d4af37",
+                        "background": "#121414",
+                        "on-primary": "#3c2f00",
+                        "on-primary-fixed": "#241a00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "gutter": "24px",
+                        "section-gap-mobile": "64px",
+                        "section-gap-desktop": "128px",
+                        "margin-edge": "32px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Poppins"],
+                        "body-lg": ["Poppins"],
+                        "headline-md": ["Poppins"],
+                        "body-md": ["Poppins"],
+                        "display-lg-mobile": ["Poppins"],
+                        "headline-sm": ["Poppins"],
+                        "label-caps": ["Poppins"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #121414;
+            color: #e2e2e2;
+            scroll-behavior: smooth;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(18, 20, 20, 0.2) 0%, rgba(18, 20, 20, 0.8) 100%);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(242, 202, 80, 0.3);
+        }
+        .dotted-leader {
+            border-bottom: 1px dotted rgba(208, 197, 175, 0.3);
+            flex-grow: 1;
+            margin: 0 8px;
+            position: relative;
+            top: -4px;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121414;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333535;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f2ca50;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-md border-b border-white/15 shadow-[0_40px_40px_-15px_rgba(26,18,11,0.3)]">
+<div class="flex justify-between items-center px-margin-edge py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Lumière Gastronomy Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs2STCFcz5IvgewzlIZjIvJdMum6VMWWLDT0_zP8C-ZCa0wlpo5qKKPdeXf4DjdcxbTE0OwNrwQhJxOZRgzfgURvt5tQf3PNzLssRBTOzpuvpC5vN5Dz-6odQd0C54BlIIY5r5NcMnhaG_pWsg4GSW86V3arqOHWFCobHmgLN5zgI80mclePjLwvusu0KpdHLzZwbprZxrhZSIyN97mR2xnsHXH70MjmkR6-PtP6rZ6CjCh1AL1KxG8zzlzQgje4GRIX_zhFbpix8O"/>
+<span class="text-headline-sm font-headline-sm font-bold tracking-[0.1em] text-primary hidden md:block">Lumière Gastronomy</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+    <a class="text-on-surface hover:text-primary transition-colors font-medium" href="Index.html">Home</a>
+<a class="text-on-surface hover:text-primary transition-colors font-medium" href="menu.html">Menu</a>
+<a class="text-on-surface hover:text-primary transition-colors font-medium" href="About.html">Story</a>
+<a class="text-on-surface hover:text-primary transition-colors font-label-caps text-label-caps" href="Package.html">Private Table</a>
+<a class="text-on-surface hover:text-primary transition-colors font-label-caps text-label-caps" href="Package.html">Package</a>
+<a class="text-on-surface hover:text-primary transition-colors font-medium" href="Booking.html">Contact</a>
+<button class="bg-primary text-on-primary-fixed px-6 py-2 rounded-lg font-label-caps uppercase tracking-widest hover:scale-105 duration-200 transition-all"><a href="Booking.html">Book a Table</a>
+                    Book a Table
+                </button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">restaurant_menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA8K83bjhdqbKpICPZSiFwjRhb8_z4r_AZYDFmDgUMWZK7L8NKaFg-j5AoUumLkL_G_jVnJqwCO-m-M7avU8pmJNA9s4-hpSBmGr34q-YPRxsyERXGNYhAcLJmVNDEPYfPtoDPC5GAvA_3VcfoknFkeXKPd02MJWogRYeARNVOJy19_-IT0deCWV-iP321lWoygGh_SB6fXSR9Ey06RH_Sxzrx8gzgfLbZ0gqUpdbyXMkgCUeE6Nx3qE8cOFZ3ghlMmOCJZ2XTpWeIk')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 text-center px-margin-edge max-w-4xl opacity-0 translate-y-10 transition-all duration-1000 ease-out" id="hero-content">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-6 tracking-tight leading-none text-glow">
+                The Art of Taste
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                An immersive culinary journey where seasonal excellence meets avant-garde technique. Experience the quiet luxury of artisanal dining.
+            </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<a class="w-full md:w-auto bg-primary text-on-primary font-label-caps px-10 py-4 rounded-lg tracking-[0.2em] hover:brightness-110 transition-all duration-300 shadow-xl shadow-primary/20" href="menu.html">
+                    VIEW MENU
+                </a>
+<button class="w-full md:w-auto glass-panel text-on-surface font-label-caps px-10 py-4 rounded-lg tracking-[0.2em] hover:bg-white/10 transition-all duration-300"><a href="Booking.html"> RESERVE TABLE</a>
+                   
+                </button>
+</div>
+</div>
+</header>
+<!-- Feature Bento Cards -->
+<section class="py-section-gap-desktop px-margin-edge max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="glass-panel p-10 rounded-xl group hover:border-primary/50 transition-all duration-500">
+<div class="text-primary mb-6 transition-transform duration-500 group-hover:-translate-y-2">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-4">Fresh Ingredients</h3>
+<p class="text-on-surface-variant leading-relaxed">Sourced daily from our private estate and local artisanal producers who share our commitment to purity.</p>
+</div>
+<!-- Card 2 -->
+<div class="glass-panel p-10 rounded-xl group hover:border-primary/50 transition-all duration-500 translate-y-0 md:translate-y-8">
+<div class="text-primary mb-6 transition-transform duration-500 group-hover:-translate-y-2">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">skillet</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-4">Expert Chefs</h3>
+<p class="text-on-surface-variant leading-relaxed">Led by Michelin-distinguished visionaries who transform raw elements into edible masterpieces.</p>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel p-10 rounded-xl group hover:border-primary/50 transition-all duration-500">
+<div class="text-primary mb-6 transition-transform duration-500 group-hover:-translate-y-2">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-4">Premium Quality</h3>
+<p class="text-on-surface-variant leading-relaxed">From the crystal glassware to the silk-threaded linens, every detail is orchestrated for perfection.</p>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap-desktop bg-surface-container-lowest" id="story">
+<div class="max-w-container-max mx-auto px-margin-edge grid grid-cols-1 md:grid-cols-2 gap-section-gap-mobile items-center">
+<div class="relative group">
+<div class="absolute -inset-4 border border-primary/20 rounded-xl transition-all duration-700 group-hover:inset-0"></div>
+<img alt="Lumière Interior" class="relative rounded-lg shadow-2xl w-full aspect-square object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0m2LV6LIPtmFv59CFW_-pvqqNCUl2iRzi8fAPpiZ-luE00HrxnGaxZeKBP_GX6WwiWSzhcSeS7MLEcIPu6A3LMH0iIZpTdYAiyNj9iAy0rU2L9UWcAJZqRGju63kI4Lndddu3i-WYl5wnnh7Dy8MxRFXmgo30YNMSkUOKDXCx9jNcgW0R3Dhiy7D1_WLGy66knV8ID3NRy6_SUuVnlVqiHVG4NN1fpKfub1FuaPqChW271_5U15Hc07b2RMOx2FW1B-9gQT_l4SzR"/>
+</div>
+<div class="space-y-8">
+<span class="text-primary font-label-caps tracking-[0.3em]">OUR STORY</span>
+<h2 class="font-headline-md text-headline-md md:text-display-lg-mobile text-on-surface leading-tight">Artisanal Dining Reimagined</h2>
+<p class="text-on-surface-variant text-body-lg leading-relaxed">
+                    Lumière Gastronomy was born from a singular vision: to create a sanctuary where the senses are awakened through the harmony of light and flavor. Our kitchen operates as a studio, where textures are explored and traditional boundaries are gently challenged.
+                </p>
+<p class="text-on-surface-variant leading-relaxed">
+                    Founded in 2018, we have quickly become a destination for those who seek more than just a meal. We offer a curated experience that celebrates the intimacy of the dining table.
+                </p>
+<div class="pt-4">
+<button class="border-b-2 border-primary text-primary pb-2 font-medium hover:tracking-widest transition-all duration-300">
+                        LEARN MORE ABOUT OUR ETHOS
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Preview Section -->
+<section class="py-section-gap-desktop overflow-hidden" id="menu">
+<div class="max-w-container-max mx-auto px-margin-edge mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<span class="text-primary font-label-caps tracking-[0.3em]">CURATED SELECTION</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-4">Seasonal Masterpieces</h2>
+</div>
+<div class="flex gap-4">
+<button class="p-4 border border-white/10 rounded-full hover:bg-white/5 transition-colors" id="prev-menu">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="p-4 border border-white/10 rounded-full hover:bg-white/5 transition-colors" id="next-menu">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex gap-gutter overflow-x-auto pb-12 snap-x px-margin-edge no-scrollbar" id="menu-container">
+<!-- Menu Item 1 -->
+<div class="min-w-[320px] md:min-w-[450px] snap-center glass-panel rounded-xl overflow-hidden group">
+<div class="h-64 overflow-hidden">
+<img alt="Gourmet Steak" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdMDFTY7ePHPM0VVRWQIYff-R5m5K3rauz_9smcyC6ckei2zqZX3RPe1hv7nrzQuf-zvuw5OgEpfu0RP6F18bintcmFKrIluhmHapURYDigpKCiZYMix4khBDHIFwuf3jLOitnkirZiCNA1pCzrn4fCUIWqqeM7dGxfDbLbmPN4-q5O4m6AW4-p0l8Hto_n-mcjZtSrCe8yALGlA0rssaJH3WG1bfR4ZdlX_t75VgjpOK5pKUyFv2aSn1EV86JCsHKnSojSYsw_0kp"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">The Reserve Ribeye</h4>
+<span class="text-primary font-bold">$78</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6">Dry-aged 45 days, smoked sea salt, truffle-infused jus, roasted bone marrow.</p>
+<div class="flex gap-2">
+<span class="text-[10px] font-label-caps px-3 py-1 border border-primary/30 rounded-full text-primary">GLUTEN FREE</span>
+<span class="text-[10px] font-label-caps px-3 py-1 border border-primary/30 rounded-full text-primary">SIGNATURE</span>
+</div>
+</div>
+</div>
+<!-- Menu Item 2 -->
+<div class="min-w-[320px] md:min-w-[450px] snap-center glass-panel rounded-xl overflow-hidden group">
+<div class="h-64 relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A macro photography shot of a delicate sea bass crudo, garnished with vibrant edible flowers, citrus zest, and tiny droplets of premium olive oil on a matte black plate. The lighting is soft and directional, highlighting the translucent texture of the fish. The aesthetic is sophisticated, minimalist, and high-end, utilizing a palette of off-whites, golds, and deep blacks." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVOGQ040CVwyHCQo0HWgdEff1ROyF1N3CbaQdMac5myzbIReCH8lYQ_U9z3kAq9cuQ8USktdIeCft7znqeehbRT_4mkocof9TKg_1u9IQpuaOk6uf3H1n88fME0DA12CXQ7Flgcp2D4_Y2k16yWKoTd6_DimkkJ54SYmfjaf20wUzJYdXZJ3aKaTydGXVuv7kHpBtpngl1Vb07tO8-9f7sJydU1t116em70m8M88bxgYTkSkN_V-AhGL6HCE4HcO0E0kY_BbGyQeeA')"></div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Wild Sea Bass</h4>
+<span class="text-primary font-bold">$64</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6">Pan-seared, saffron risotto, samphire, champagne emulsion.</p>
+<div class="flex gap-2">
+<span class="text-[10px] font-label-caps px-3 py-1 border border-primary/30 rounded-full text-primary">FRESH CATCH</span>
+</div>
+</div>
+</div>
+<!-- Menu Item 3 -->
+<div class="min-w-[320px] md:min-w-[450px] snap-center glass-panel rounded-xl overflow-hidden group">
+<div class="h-64 relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="An exquisite vegetarian dish featuring honey-roasted heirloom carrots and beetroots resting on a bed of whipped goat cheese, sprinkled with toasted hazelnuts and micro-herbs. The composition is artistic and asymmetric, set against a dark, moody wooden background that emphasizes the vibrant oranges and purples of the vegetables. Luxurious dark-mode photography style with warm gold accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDimYyF38ainpdwmgIk0zBW58M4V-j2-q3ez-PGsyfDiMdS2tdx25dVrIGhZLg_1u-v9YRxVgMucRHyPPBlawSq_FlD3Kv83fx674yGnCBBpQ-PPKgSRlIgnXUJgGPEVCpMqixSjK9KcT6JhTt53AUfyWYp5it9xbfYo5eZ2ujCNvM8mSAOCoMqv8VGXSiab7uPlN2YIfJ7Q_1KsHlARZYQiUq78Ax1qjZ__cBH_1AV8al5FcV730grzB3N-fEmJPGjKCQtb5HgSj--')"></div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Heirloom Garden</h4>
+<span class="text-primary font-bold">$42</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6">Roasted roots, goat cheese snow, honey balsamic, toasted hazelnut.</p>
+<div class="flex gap-2">
+<span class="text-[10px] font-label-caps px-3 py-1 border border-primary/30 rounded-full text-primary">VEGETARIAN</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap-desktop">
+<div class="max-w-container-max mx-auto px-margin-edge">
+<div class="relative overflow-hidden rounded-2xl">
+<div class="absolute inset-0 bg-cover bg-center scale-105" data-alt="A luxurious, dark wood paneled interior of a private dining room at night. A long polished table reflects the warm glow of hanging Edison bulbs and gold-accented candles. The atmosphere is intimate and exclusive, suggesting a high-end gastronomic experience. Deep shadows and rich textures create a sense of mystery and prestige, aligned with a quiet luxury brand identity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBhKoZc9XTVSZmSuy2hkfSC9Wz_yVs9O9_nhKOrPaRu9g_ASlqzPXhTNi2zHUfyCdFKwQ3mdZTVkAiXXb4v7LT63o59BnTA7gUI6M2ECJt85TcQjCIWPrrBHB_pd4DrHDR3wa4dfvVV6YtKPmK32i3cjqvhkwDd_kgH_7AKpFOUQL05nfZ28hq6nxxd9HKw4EeM4joS7EYLpgqEDi_HsdXTRJjMs0qHxy12HDgXSX12xTP4Kp9NNulqBHe9R8a6scWIzgKwp-A6b720')"></div>
+<div class="absolute inset-0 bg-surface-container-lowest/80 backdrop-blur-sm"></div>
+<div class="relative z-10 py-24 px-8 md:px-20 text-center max-w-3xl mx-auto">
+<h2 class="font-headline-md text-headline-md md:text-display-lg-mobile text-on-surface mb-8">Book Your Experience</h2>
+<p class="text-on-surface-variant mb-12 text-body-lg">
+                        Reservations are recommended at least two weeks in advance. For parties larger than six, please contact our private dining concierge.
+                    </p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="bg-primary text-on-primary-fixed font-label-caps px-12 py-5 rounded-lg tracking-[0.2em] hover:scale-105 transition-all shadow-2xl">
+                            CHECK AVAILABILITY
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-section-gap-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-edge max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="text-headline-sm font-headline-sm text-primary font-bold tracking-[0.1em]">Lumière</div>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-xs">
+                    Crafting unforgettable culinary moments through the intersection of heritage and innovation.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center rounded-full glass-panel hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full glass-panel hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="text-on-surface font-semibold tracking-widest uppercase text-xs">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Menu</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Reservations</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Private Dining</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Our Story</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-on-surface font-semibold tracking-widest uppercase text-xs">Visit Us</h4>
+<div class="text-on-surface-variant space-y-2 text-sm">
+<p>128 Gastronomy Lane</p>
+<p>Cuisine District, NY 10013</p>
+<p class="pt-4">+1 (212) 555-0198</p>
+<p>concierge@lumiere.com</p>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="text-on-surface font-semibold tracking-widest uppercase text-xs">Newsletter</h4>
+<p class="text-on-surface-variant text-sm">Subscribe to receive exclusive event invitations.</p>
+<div class="relative">
+<input class="w-full bg-surface-container border-0 border-b border-white/10 text-on-surface py-3 focus:ring-0 focus:border-primary transition-all text-sm px-0" placeholder="Email Address" type="email"/>
+<button class="absolute right-0 top-1/2 -translate-y-1/2 text-primary">
+<span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-20 border-t border-white/5 pt-8 text-center px-margin-edge">
+<p class="text-on-surface-variant text-[10px] tracking-widest uppercase">© 2024 Lumière Gastronomy. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Hero animation on load
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const hero = document.getElementById('hero-content');
+                hero.classList.remove('opacity-0', 'translate-y-10');
+            }, 300);
+        });
+
+        // Horizontal scroll navigation
+        const menuContainer = document.getElementById('menu-container');
+        document.getElementById('next-menu').addEventListener('click', () => {
+            menuContainer.scrollBy({ left: 400, behavior: 'smooth' });
+        });
+        document.getElementById('prev-menu').addEventListener('click', () => {
+            menuContainer.scrollBy({ left: -400, behavior: 'smooth' });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000');
+        });
+    </script>
+</body></html>
